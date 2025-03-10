@@ -1,68 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+/* Smart Mirror UI - Futuristic Design */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 body {
     background-color: black;
     color: white;
     font-family: 'Orbitron', sans-serif;
     text-align: left;
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    padding-left: 20px;
-}
-
-.container {
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
     height: 100vh;
-    padding: 20px;
 }
 
-.clock {
-    font-size: 6rem;
-    text-shadow: 0 0 30px cyan;
+/* Clock Styling */
+#clock {
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 0 0 10px cyan, 0 0 20px blue;
+    animation: glow 1.5s infinite alternate;
 }
 
-.date {
-    font-size: 2rem;
-    margin-top: 5px;
+/* Date Styling */
+#date {
+    font-size: 28px;
+    color: #aaa;
+    text-shadow: 0 0 5px gray;
 }
 
-.weather {
-    font-size: 1.8rem;
-    margin-top: 15px;
+/* Weather Styling */
+#weather {
+    font-size: 24px;
+    color: cyan;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
-
-.weather img {
-    width: 80px;
-    height: 80px;
+#weather img {
+    width: 50px;
+    height: 50px;
     filter: drop-shadow(0 0 10px cyan);
 }
 
-.system-info {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: cyan;
+/* Battery & WiFi */
+#status {
+    font-size: 22px;
+    color: lightgreen;
+    text-shadow: 0 0 5px green;
 }
 
-.news-ticker {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    font-size: 1.5rem;
-    color: cyan;
-    animation: scrollNews 15s linear infinite;
+/* News Styling */
+#news {
+    font-size: 22px;
+    color: orange;
+    text-shadow: 0 0 5px orange;
+    animation: scrollText 10s linear infinite;
 }
 
-@keyframes scrollNews {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px cyan, 0 0 15px blue;
+    }
+    to {
+        text-shadow: 0 0 15px cyan, 0 0 25px blue;
+    }
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
