@@ -1,77 +1,74 @@
-/* Smart Mirror UI - Futuristic Design */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 body {
     background-color: black;
-    color: white;
+    color: #0ff; /* Neon Cyan */
     font-family: 'Orbitron', sans-serif;
     text-align: left;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100vh;
+    overflow: hidden;
 }
 
-/* Clock Styling */
+/* Clock */
 #clock {
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: bold;
-    text-shadow: 0 0 10px cyan, 0 0 20px blue;
-    animation: glow 1.5s infinite alternate;
+    text-shadow: 0 0 15px cyan;
+    animation: fadeIn 2s ease-in-out;
 }
 
-/* Date Styling */
+/* Date */
 #date {
-    font-size: 28px;
-    color: #aaa;
-    text-shadow: 0 0 5px gray;
+    font-size: 2rem;
+    text-shadow: 0 0 10px cyan;
+    animation: fadeIn 3s ease-in-out;
 }
 
-/* Weather Styling */
+/* Weather */
 #weather {
-    font-size: 24px;
-    color: cyan;
     display: flex;
     align-items: center;
-    gap: 10px;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    text-shadow: 0 0 10px cyan;
 }
+
 #weather img {
     width: 50px;
     height: 50px;
     filter: drop-shadow(0 0 10px cyan);
+    animation: fadeIn 3s ease-in-out;
+}
+
+#weather span {
+    margin-left: 10px;
 }
 
 /* Battery & WiFi */
-#status {
-    font-size: 22px;
-    color: lightgreen;
-    text-shadow: 0 0 5px green;
+#battery {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow: 0 0 10px cyan;
+    animation: fadeIn 4s ease-in-out;
 }
 
-/* News Styling */
+/* Breaking News */
 #news {
-    font-size: 22px;
-    color: orange;
-    text-shadow: 0 0 5px orange;
+    font-size: 1.6rem;
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: 0 0 10px cyan;
     animation: scrollText 10s linear infinite;
 }
 
 /* Animations */
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px cyan, 0 0 15px blue;
-    }
-    to {
-        text-shadow: 0 0 15px cyan, 0 0 25px blue;
-    }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes scrollText {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }
