@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Mirror UI</title>
+    <title>Smart Mirror</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <div class="container">
-        <div class="clock" id="time">12:30 PM</div>
-        <div class="date" id="date">March 5, 2025</div>
-        <div class="weather">
-            <img id="weather-icon" src="" alt="Weather icon">
-            <span id="weather-text">Loading weather...</span>
-        </div>
-        <div class="system-info" id="system-info">Battery: 100% | WiFi: Strong Signal</div>
-        <div class="news-ticker" id="news">Breaking News: Smart Mirror is now interactive! 🚀</div>
+
+    <!-- Time & Date -->
+    <div id="clock">12:00 PM</div>
+    <div id="date">March 10, 2025</div>
+
+    <!-- Weather Section -->
+    <div id="weather">
+        <img src="weather-icon.png" alt="Weather Icon">
+        <span>Loading weather...</span>
     </div>
+
+    <!-- Battery & WiFi Status -->
+    <div id="battery">Battery: 100% | WiFi: Strong Signal</div>
+
+    <!-- Breaking News -->
+    <div id="news">🚀 Breaking News: Smart Mirror is now interactive!</div>
+
     <script src="script.js"></script>
 </body>
 </html>
